@@ -29,6 +29,8 @@
           width: 500px;
           height: 25px;
           border-width: 2px;
+          top: 89px; bottom: 0;
+          left: 10;
  }
 #progress_bar {
           content: '\A';
