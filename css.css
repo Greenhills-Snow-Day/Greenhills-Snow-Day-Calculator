@@ -1,52 +1,49 @@
- .container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;  
- }
- #text {
-          padding: 10px;
- }
- #school {
-          height: 25px;
-          align-self: center;
- }
- #spacer {
-          width: 10px;
- }
- #button {
-          align-self: center;
-          height: 25px;
-          line-height: 1.2;
-          justify-content: center;
-          align-items: center;
-          padding-top: 0.1em;
-          padding-bottom: 1em;
-          border-radius: 0.375em;
- }
- .progress-bar-container {
-          width: 500px;
-          height: 25px;
-          border-radius: 10px;
-          position: relative;
-          overflow: hidden;
-          border-color: black;
-          border-style: solid;
-          border-width:2px;
+const button = document.getElementById("button");
+button.addEventListener("click", calculate);
+
+
+function calculate() {
+          var select = document.getElementById("school");
+          var selectedOption = select.options[select.selectedIndex]; 
+          if (selectedOption.text == "Greenhills") {
+                    bar()
+          }
 }
-        
-.progress-bar {
-          position: absolute;
-          height: 100%;
-          width: 0%;
-          background-color: #37a7e3;
-          display: flex;
+function bar(){
+          var width = 0;                  //  set your counter to 1
+
+          function myLoop() {         //  create a loop function
+                    setTimeout(function() {   //  call a 3s setTimeout when the loop is called  //  your code here
+                              width+=0.1; 
+                              if (width > 19 & width <21){
+                                        document.getElementById("updates").innerHTML = "Gathering Snow Data..."
+                              }
+                              else if (width > 39 & width <41){
+                                        document.getElementById("updates").innerHTML = "Hacking Into Greenhills School..."
+                              } 
+                              else if (width > 59 & width <61){
+                                        document.getElementById("updates").innerHTML = "Retrieving Snow Day Info..."
+                              } 
+                              else if (width > 79 & width <81){
+                                        document.getElementById("updates").innerHTML = "Finding Percentage..."
+                              } 
+                              else if (width > 99){
+                                        document.getElementById("updates").innerHTML = "Success"
+                              }             //  increment the counter
+                              if (width <= 100) {
+                                        document.getElementById("progress-bar").style.width = width.toString() + "%"           //  if the counter < 10, call the loop function
+                                        myLoop();             //  ..  again which will trigger another 
+                              }
+                              else{
+                                        document.getElementById("percent").innerHTML = "0% Chance"
+                              }
+                                                    //  ..  setTimeout()
+                    }, 10)
+                    
+          }
+
+          myLoop();  
 }
-#updates {
-          font-size: 15px;
-          padding:0px;
-}
-#percent {
-          padding:0px;
-          font-size: 50px;
-          color: rgb(255, 100, 100);
-}
+          
+
+
