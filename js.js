@@ -15,7 +15,7 @@ function bar(){
           document.getElementById("bar").style.visibility = "unset";
           function myLoop() {         //  create a loop function
                     setTimeout(function() {   //  call a 3s setTimeout when the loop is called  //  your code here
-                              width+=0.1; 
+                              width+=0.2; 
                               if (width > 19 & width <21){
                                         document.getElementById("updates").innerHTML = "Gathering Snow Data..."
                               }
