@@ -23,25 +23,30 @@
           padding-bottom: 1em;
           border-radius: 0.375em;
  }
- #progress_box {
-          border-style: none;
-          border-color: black;
+ .progress-bar-container {
           width: 500px;
           height: 25px;
-          border-width: 2px;
-          top: 89px; bottom: 0;
-          left: 10;
- }
-#progress_bar {
-          content: '\A';
+          border-radius: 10px;
+          position: relative;
+          overflow: hidden;
+          border-color: black;
+          border-style: solid;
+          border-width:2px;
+}
+        
+.progress-bar {
           position: absolute;
-          background: rgb(45, 10, 110);
-          top: 89px; bottom: 0;
-          left: 10; 
-          width: 0px; 
-          height: 25px
+          height: 100%;
+          width: 0%;
+          background-color: #37a7e3;
+          display: flex;
+}
+#updates {
+          font-size: 15px;
+          padding:0px;
 }
 #percent {
+          padding:0px;
           font-size: 50px;
-          color: red;
+          color: rgb(255, 100, 100);
 }
