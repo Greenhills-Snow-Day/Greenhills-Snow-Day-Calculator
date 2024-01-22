@@ -24,7 +24,7 @@
           border-radius: 0.375em;
  }
  #progress_box {
-          border-style: solid;
+          border-style: none;
           border-color: black;
           width: 500px;
           height: 25px;
