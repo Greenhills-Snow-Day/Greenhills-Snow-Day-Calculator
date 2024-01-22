@@ -1,0 +1,45 @@
+ .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;  
+ }
+ #text {
+          padding: 10px;
+ }
+ #school {
+          height: 25px;
+          align-self: center;
+ }
+ #spacer {
+          width: 10px;
+ }
+ #button {
+          align-self: center;
+          height: 25px;
+          line-height: 1.2;
+          justify-content: center;
+          align-items: center;
+          padding-top: 0.1em;
+          padding-bottom: 1em;
+          border-radius: 0.375em;
+ }
+ #progress_box {
+          border-style: solid;
+          border-color: black;
+          width: 500px;
+          height: 25px;
+          border-width: 2px;
+ }
+#progress_bar {
+          content: '\A';
+          position: absolute;
+          background: rgb(45, 10, 110);
+          top: 89px; bottom: 0;
+          left: 10; 
+          width: 0px; 
+          height: 25px
+}
+#percent {
+          font-size: 50px;
+          color: red;
+}
