@@ -11,7 +11,7 @@ function calculate() {
 }
 function bar(){
           var width = 0;                  //  set your counter to 1
-
+          document.getElementById("bar").style.visibility = "unset";
           function myLoop() {         //  create a loop function
                     setTimeout(function() {   //  call a 3s setTimeout when the loop is called  //  your code here
                               width++; 
